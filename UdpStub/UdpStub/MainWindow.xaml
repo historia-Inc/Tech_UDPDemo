@@ -1,0 +1,55 @@
+﻿<Window x:Class="UDPStub.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UdpStub"
+        mc:Ignorable="d"
+        Title="UE4UDPCommunication" Height="362" Width="735">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="name_X" HorizontalAlignment="Left" Margin="85,30,0,0" TextWrapping="Wrap" Text="X座標" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_Y" HorizontalAlignment="Left" Margin="85,60,0,0" TextWrapping="Wrap" Text="Y座標" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_Z" HorizontalAlignment="Left" Margin="85,90,0,0" TextWrapping="Wrap" Text="Z座標" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_Roll" HorizontalAlignment="Left" Margin="85,130,0,0" TextWrapping="Wrap" Text="Roll" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_Pitch" HorizontalAlignment="Left" Margin="85,160,0,0" TextWrapping="Wrap" Text="Pitch" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_Yaw" HorizontalAlignment="Left" Margin="85,190,0,0" TextWrapping="Wrap" Text="Yaw" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_ScaleX" HorizontalAlignment="Left" Margin="85,230,0,0" TextWrapping="Wrap" Text="Scale X" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_ScaleY" HorizontalAlignment="Left" Margin="85,260,0,0" TextWrapping="Wrap" Text="Scale Y" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_ScaleZ" HorizontalAlignment="Left" Margin="85,290,0,0" TextWrapping="Wrap" Text="Scale Z" VerticalAlignment="Top" Height="18" Width="110"/>
+        <TextBlock x:Name="name_R" HorizontalAlignment="Left" Margin="487,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="33"><Run Text="R"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="name_G" HorizontalAlignment="Left" Margin="487,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="33"><Run Text="G"/><LineBreak/><Run/></TextBlock>
+        <TextBlock x:Name="name_B" HorizontalAlignment="Left" Margin="487,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="18" Width="33"><Run Text="B"/><LineBreak/><Run/></TextBlock>
+
+        <TextBlock x:Name="value_X" HorizontalAlignment="Right" Margin="0,30,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_Y" HorizontalAlignment="Right" Margin="0,60,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_Z" HorizontalAlignment="Right" Margin="0,90,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_Roll" HorizontalAlignment="Right" Margin="0,130,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_Pitch" HorizontalAlignment="Right" Margin="0,160,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_Yaw" HorizontalAlignment="Right" Margin="0,190,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_ScaleX" HorizontalAlignment="Right" Margin="0,230,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_ScaleY" HorizontalAlignment="Right" Margin="0,260,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_ScaleZ" HorizontalAlignment="Right" Margin="0,290,227,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_R" HorizontalAlignment="Right" Margin="0,230,18,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_G" HorizontalAlignment="Right" Margin="0,260,18,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+        <TextBlock x:Name="value_B" HorizontalAlignment="Right" Margin="0,290,18,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="18" Width="40"/>
+
+        <Slider x:Name="X" HorizontalAlignment="Left" Margin="200,30,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Maximum="100" Minimum="-100" ValueChanged="X_ValueChanged"/>
+        <Slider x:Name="Y" HorizontalAlignment="Left" Margin="200,60,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Maximum="100" Minimum="-100" ValueChanged="Y_ValueChanged"/>
+        <Slider x:Name="Z" HorizontalAlignment="Left" Margin="200,90,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Maximum="100" Minimum="-100" ValueChanged="Z_ValueChanged"/>
+        <Slider x:Name="Roll" HorizontalAlignment="Left" Margin="200,130,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Maximum="360" ValueChanged="Roll_ValueChanged"/>
+        <Slider x:Name="Pitch" HorizontalAlignment="Left" Margin="200,160,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Maximum="360" ValueChanged="Pitch_ValueChanged"/>
+        <Slider x:Name="Yaw" HorizontalAlignment="Left" Margin="200,190,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Maximum="360" ValueChanged="Yaw_ValueChanged"/>
+        <Slider x:Name="ScaleX" HorizontalAlignment="Left" Margin="200,230,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Value="1" Minimum="0.1" ValueChanged="ScaleX_ValueChanged"/>
+        <Slider x:Name="ScaleY" HorizontalAlignment="Left" Margin="200,260,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Value="1" Minimum="0.1" ValueChanged="ScaleY_ValueChanged"/>
+        <Slider x:Name="ScaleZ" HorizontalAlignment="Left" Margin="200,290,0,0" VerticalAlignment="Top" Width="255" RenderTransformOrigin="0.5,0.5" Value="1" Minimum="0.1" ValueChanged="ScaleZ_ValueChanged"/>
+        <Slider x:Name="R" HorizontalAlignment="Left" Margin="505,230,0,0" VerticalAlignment="Top" Width="159" RenderTransformOrigin="0.5,0.5" Maximum="255" Minimum="0" ValueChanged="R_ValueChanged"/>
+        <Slider x:Name="G" HorizontalAlignment="Left" Margin="505,260,0,0" VerticalAlignment="Top" Width="159" RenderTransformOrigin="0.5,0.5" Maximum="255" Minimum="0" ValueChanged="G_ValueChanged"/>
+        <Slider x:Name="B" HorizontalAlignment="Left" Margin="505,290,0,0" VerticalAlignment="Top" Width="159" RenderTransformOrigin="0.5,0.5" Maximum="255" Minimum="0" ValueChanged="B_ValueChanged"/>
+
+        <Rectangle x:Name="ColorBox" Fill="Black" HorizontalAlignment="Left" Height="100" Margin="522,69,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+
+    </Grid>
+</Window>
