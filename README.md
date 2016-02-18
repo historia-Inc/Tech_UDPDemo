@@ -4,6 +4,8 @@ UE4でUDP通信を扱う際のデモプロジェクトです。
 デモ内容の解説ページはこちらです。  
 http://historia.co.jp/?page_id=4188  
   
+## 構成
+
 * Binaries
    * Stub  
 UDP通信でUE4側にプロパティ変更パケットを送るためのGUIアプリケーションです。  
