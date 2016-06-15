@@ -17,7 +17,7 @@ UDPCommunication.exe を実行することで利用できます。
  
 * UDPCommunication  
 UE4アプリケーションのプロジェクトです。  
-4.11 preview5 で動作確認してあります。  
+4.11.2 で動作確認してあります。  
 Generate Visual Studio project files からソリューションを作成してビルドして下さい。  
  
 * UdpStub
