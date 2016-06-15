@@ -94,6 +94,8 @@ bool UUdpSocket::CreateReceiver()
 
 	Receiver->OnDataReceived().BindUObject(this, &UUdpSocket::OnDataReceived);
 
+	Receiver->Start();
+
 	return true;
 }
 
